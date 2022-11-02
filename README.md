@@ -9,9 +9,11 @@ It also includes features such as:
 * The ability to auto parent or manualy set the parent of the pooled object at creation
 
 ## Setup
-* Add **PooledObjectManager** and **PoolDataSender** to a gameObject in scene. In the PoolDataSender inspector, set up the pools you want to create. 
+* Add **PooledObjectManager** and **PoolDataSender** to a gameObject in scene. 
+  * In the PoolDataSender inspector, set up the pools you want to create. 
 
-* Pooled Objects must have a script on them that derives from the PooledObject class. This allows for error logging, tracking the objects state, and some initialization.
+* Pooled Objects must have a script on them that **derives** from **PooledObject** class. This allows for error logging, tracking the objects state, and some initialization. 
+  * Example class is included and can be attached to the prefab if you dont want your classes deriving from PooledObject.
 
 ## Use
 The PoolManager class by default is a Singleton, so to access the methods to get objects from their pools you will need to refrence it's instance ie. ```Poolmanager.Instance.TryGetObjectFromPool(prefab, out T component);```
